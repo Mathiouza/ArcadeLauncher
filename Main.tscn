@@ -37,15 +37,15 @@ margin_right = 426.0
 margin_bottom = 341.0
 custom_fonts/font = SubResource( 1 )
 text = "Rien a afficher!
-Ajouter des jeux dans le fichier texte!
+Ajoutez des jeux dans le fichier texte!
 
 C:\\Users\\<current user>\\AppData\\Roaming\\Godot\\app_userdata\\Launcher Arcade\\games.txt
 
 Format:
-Une ligne par jeu, le nom du jeu entre guillement, un espace, puis le chemin absolu vers l'executable. Example:
+Une ligne par jeu, le nom du jeu entre guillemets, un espace, puis le chemin absolu vers l'executable entrer guillemets eglament. Example:
 
-\"Arcade Rhythm\" C:\\chemin\\chemin\\exe.exe
-\"Tetris\" C:\\chemin\\chemin2\\exe.exe
+\"Arcade Rhythm\" \"C:\\chemin\\chemin\\exe.exe\"
+\"Tetris\" \"C:\\chemin\\chemin2\\exe.exe\"
 ..."
 align = 1
 valign = 1
