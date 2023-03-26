@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://pixels.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://pg_logo_manette.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+
+void fragment() {
+	COLOR = vec4(1.0 - texture(TEXTURE, UV).rgb, texture(TEXTURE, UV).a);
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 426.0
+margin_bottom = 341.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Text" type="Label" parent="."]
+margin_right = 426.0
+margin_bottom = 341.0
+custom_fonts/font = SubResource( 1 )
+text = "Rien a afficher!
+Ajouter des jeux dans le fichier texte!
+
+C:\\Users\\<current user>\\AppData\\Roaming\\Godot\\app_userdata\\Launcher Arcade\\games.txt
+
+Format:
+Une ligne par jeu, le nom du jeu entre guillement, un espace, puis le chemin absolu vers l'executable. Example:
+
+\"Arcade Rhythm\" C:\\chemin\\chemin\\exe.exe
+\"Tetris\" C:\\chemin\\chemin2\\exe.exe
+..."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( 399, 320 )
+scale = Vector2( 0.0281626, 0.0281626 )
+texture = ExtResource( 3 )
