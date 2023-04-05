@@ -1,5 +1,7 @@
 extends Node2D
 
+var delay = 0
+
 var selection = 0
 var spacing = 0
 var names = []
@@ -33,7 +35,10 @@ func update_text():
 var time = 0.0
 
 func _process(delta):
-	if games.size() > 0:
+	if delay > 0:
+		delay -= delta
+	
+	if games.size() > 0 and delay <= 0:
 		time += delta
 		if time >= 1.0:
 			spacing = 2 if spacing == 0 else 0
@@ -55,5 +60,6 @@ func _process(delta):
 			$Tween.start()
 
 func execute_game(game_selection):
+	delay = 2.0
 	OS.execute(games[game_selection], [], true)
 	OS.window_fullscreen = true
