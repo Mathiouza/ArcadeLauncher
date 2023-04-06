@@ -8,6 +8,7 @@ var names = []
 var games = []
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	var file = File.new()
 	if !file.file_exists("user://games.txt"):
 		file.open("user://games.txt", File.WRITE)
