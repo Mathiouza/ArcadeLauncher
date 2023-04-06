@@ -42,7 +42,7 @@ Ajoutez des jeux dans le fichier texte!
 C:\\Users\\<current user>\\AppData\\Roaming\\Godot\\app_userdata\\Launcher Arcade\\games.txt
 
 Format:
-Une ligne par jeu, le nom du jeu entre guillemets, un espace, puis le chemin absolu vers l'executable entrer guillemets eglament. Example:
+Une ligne par jeu, le nom du jeu entre guillemets, un espace, puis le chemin absolu vers l'executable entre guillemets eglament. Example:
 
 \"Arcade Rhythm\" \"C:\\chemin\\chemin\\exe.exe\"
 \"Tetris\" \"C:\\chemin\\chemin2\\exe.exe\"
